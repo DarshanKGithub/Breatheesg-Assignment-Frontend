@@ -1,4 +1,4 @@
-const apiBase = '/api';
+const apiBase = import.meta.env.VITE_API_URL || '/api';
 
 export async function fetchRecords() {
   const response = await fetch(`${apiBase}/records/`);
